@@ -1,0 +1,32 @@
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" *ngIf="postData">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{postData.title}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>Tiêu đề</label>
+                        <input type="text" class="form-control" [(ngModel)]="postData.title" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label>Mô tả</label>
+                        <textarea class="form-control" [(ngModel)]="postData.description" name="description" rows="6"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Nội dung</label>
+                        <textarea class="form-control" [(ngModel)]="postData.body" name="body" rows="8"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-update" (click)="update(postData)">Cập nhập</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

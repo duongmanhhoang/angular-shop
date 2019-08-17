@@ -1,0 +1,68 @@
+<div class="theme-inner-banner" *ngIf="post">
+    <img src="../../assets/images/shape/13.png" alt="" class="bg-shape">
+    <img src="../../assets/images/shape/14.png" alt="" class="shape-one">
+    <img src="../../assets/images/shape/15.png" alt="" class="shape-two">
+    <img src="../../assets/images/shape/16.png" alt="" class="shape-three">
+    <div class="container">
+        <h2 class="title">{{post.title}}</h2>
+    </div> <!-- /.container -->
+</div>
+<div class="section-spacing section-spacing-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8 col-12 blog-details">
+                <div class="single-blog-post" *ngIf="post">
+                    <div class="img-box"><img src="{{post.image}}}" alt=""></div>
+                    <div class="post-meta">
+                        <ul class="date-meta">
+                            <li><i class="fa fa-clock-o" aria-hidden="true"></i> October 22, 2019</li>
+                            <li><i class="fa fa-user" aria-hidden="true"></i> Manh Hoang</li>
+                            <li><i class="fa fa-comments" aria-hidden="true"></i> Comment  17</li>
+                        </ul>
+                        <h2 class="blog-title">{{post.title}}</h2>
+                        <p>{{post.body}}</p>
+                    </div> <!-- /.post-meta -->
+
+                </div> <!-- /.single-blog -->
+            </div> <!-- /.blog-list -->
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12 theme-siddebar">
+                <div class="sidebar-data sidebar-search">
+                    <form action="#">
+                        <input type="text" placeholder="Search">
+                        <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div> <!-- /.sidebar-search -->
+                <div class="sidebar-data sidebar-recent-post">
+                    <ul>
+                        <li>
+                            <div class="tag">TRANSPARENT BUSINESS</div>
+                            <a href="#" class="title">Engagement beyond the boardroom</a>
+                            <div class="date">May 2018</div>
+                            <a href="#" class="read-more">Read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <div class="tag">TRANSPARENT BUSINESS</div>
+                            <a href="#" class="title">Engagement beyond the boardroom</a>
+                            <div class="date">May 2018</div>
+                            <a href="#" class="read-more">Read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div> <!-- /.sidebar-recent-post -->
+                <div class="sidebar-key">
+                    <h6 class="key-title">Staff Contacts</h6>
+                    <ul>
+                        <li>
+                            <a href="#">Steven J. Joffe</a>
+                            <p>Senior Managing Director</p>
+                        </li>
+                        <li>
+                            <a href="#">Larry Portal</a>
+                            <p>Senior Managing Director</p>
+                        </li>
+                    </ul>
+                </div> <!-- /.sidebar-key -->
+            </div> <!-- /.theme-siddebar -->
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+</div>

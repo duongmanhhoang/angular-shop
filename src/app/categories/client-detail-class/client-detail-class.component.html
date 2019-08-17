@@ -1,0 +1,16 @@
+<div class="theme-inner-banner">
+    <img src="../../assets/images/shape/13.png" alt="" class="bg-shape">
+    <img src="../../assets/images/shape/14.png" alt="" class="shape-one">
+    <img src="../../assets/images/shape/15.png" alt="" class="shape-two">
+    <img src="../../assets/images/shape/16.png" alt="" class="shape-three">
+    <div class="container" *ngIf="class">
+        <h2 class="title">{{class.name}}</h2>
+    </div> <!-- /.container -->
+</div>
+<div class="section-spacing section-spacing-bottom our-class-details">
+    <div class="container" *ngIf="class">
+        <img src="{{class.image}}" alt="" class="main-img">
+        <h2 class="title">{{class.name}}</h2>
+        <p>{{class.body}}</p>
+    </div>
+</div>

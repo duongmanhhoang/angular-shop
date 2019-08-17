@@ -1,0 +1,51 @@
+<div class="top-header-section">
+    <header class="theme-main-menu clearfix">
+        <!--        <div class="logo"><a href="index-2.html"><img src="images/logo/logo.png" alt=""></a></div>-->
+
+        <div class="right-widget">
+            <ul class="clearfix">
+                <li class="cart-button"><a href="#"><i class="flaticon-001-shopping-bag"></i></a></li>
+                <li class="search-option">
+                    <div class="dropdown">
+                        <button type="button" class="dropdown-button" data-toggle="dropdown"><i
+                                class="flaticon-002-search"></i></button>
+                        <form action="#" class="dropdown-menu dropdown-menu-right">
+                            <input type="text" Placeholder="Enter Your Search">
+                            <button><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div> <!-- /.right-widget -->
+
+
+        <!-- ============== Menu Warpper ================ -->
+        <div class="menu-wrapper">
+            <nav id="mega-menu-holder" class="clearfix">
+                <ul class="clearfix">
+                    <li><a routerLink="/home">Trang chủ</a></li>
+                    <li><a routerLink="/about">Giới thiệu</a></li>
+                    <li><a routerLink="/posts/list">Bài viết</a></li>
+                    <li>
+                        <a>Lớp học</a>
+                        <ul class="dropdown">
+                            <li *ngFor="let category of categories"><a
+                                    routerLink="categories/{{category.id}}/classes">{{category.name}}</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li><a routerLink="/contact">Liên hệ</a></li>
+                    <li>
+                        <a>Quản lý</a>
+                        <ul class="dropdown">
+                            <li><a routerLink="/manage/posts/list">Bài viết</a></li>
+                            <li><a routerLink="/manage/categories/list">Danh mục lớp học</a></li>
+                            <li><a routerLink="/manage/classes/list">Lớp học</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav> <!-- /#mega-menu-holder -->
+        </div> <!-- /.menu-wrapper -->
+    </header> <!-- /.theme-main-menu -->
+</div>

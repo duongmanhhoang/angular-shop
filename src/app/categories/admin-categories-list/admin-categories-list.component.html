@@ -1,0 +1,41 @@
+<div class="theme-inner-banner">
+    <img src="../../assets/images/shape/13.png" alt="" class="bg-shape">
+    <img src="../../assets/images/shape/14.png" alt="" class="shape-one">
+    <img src="../../assets/images/shape/15.png" alt="" class="shape-two">
+    <img src="../../assets/images/shape/16.png" alt="" class="shape-three">
+    <div class="container">
+        <h2 class="title">Quản lý danh mục</h2>
+    </div> <!-- /.container -->
+</div>
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-12">
+            <button data-toggle="modal" data-target=".add-modal" class="btn btn-primary">Thêm danh mục</button>
+            <div class="table-responsive-xl">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Tiêu đề</th>
+                        <th scope="col">Hành động</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let category of categories">
+                        <th scope="row">{{category.id}}</th>
+                        <td>{{category.name}}</td>
+                        <td>
+                            <a (click)="edit(category)" data-toggle="modal" data-target=".bd-example-modal-lg"
+                               class="btn btn-primary text-white mr-3"><i class="fa fa-pencil"></i></a>
+                            <a class="btn btn-danger text-white" (click)="confirm(category.id)"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-admin-edit-category [editCategoryData]="categoryData"></app-admin-edit-category>
+<app-admin-add-category [dataCategories]="categories"></app-admin-add-category>
